@@ -3,12 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <title>메인 페이지</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        #myCarousel{
+            max-width: 60%;
+            margin: auto;
+        }
+        img{
+           margin: auto;
+        }
+        #btn{
+            border: 1px solid pink;
+            border-radius: 3px;
+            background-color: pink;
+            color: white;
+            margin : 3px;
+            padding : 2px;
+        }
+        #name{
+           display:inline;
+           font-weight: bold;
+           font-size: 18px;
+           padding: 2px;
+           text-decoration-line: none;
+           color: white;
+           letter-spacing: 2px;
+        }
+        #header-link{
+            display: inline;
+            float: right;
+            margin-top : 3px;
+        }
+
+        #header-link>a{
+            color: white;
+            margin-right: 20px;
+            text-decoration-line: none;
+           font-size: 15px;
+           padding: 2px;
+        }
+        @media(min-width: 768px){
+        .container {
+            width:750px;
+        }}
+        @media(min-width: 992px){
+        .container {
+            width:940px;
+        }}
+        .carousel-indicators>li{
+            background-color: black;
+        }
+        .carousel-indicators>.active{
+            background-color: pink;
+        }
+
+        footer>p{
+            color: white;
+            margin-top: 5px;
+            width: 100%;
+        }
+
+        footer{
+              position:fixed;
+              left:0px;
+              bottom:0px;
+              width:100%;
+        }
+
+        #title{
+             text-align:center;
+             margin-top: 10px;
+             margin-bottom: -35px;
+             font-size: 16px;
+             font-weight: bold;
+             text-shadow: 2px 1px 1px gray;
+        }
+
+
+    </style>
 </head>
 <body>
-    <nav>
-        <a href="/company/">company info</a>
-        <a href="/mysite/">product</a>
-    </nav>
-<h1>메인 페이지입니다.</h1>
+<header class="py-5" style="background:pink">
+    <a id="name" href="/">예담마켓</a>
+    <div id="header-link">
+        <a href="/company/" class="text-right text-dark">회사 소개</a>
+        <a href="/mysite/" class="text-right">제품 소개</a>
+    </div>
+</header>
+<p id="title">판매중인 상품</p>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding: 5rem; margin-bottom: 20px;">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a href="https://smartstore.naver.com/thumblina_jewelry/products/6458800212" target="_blank">
+                <img src="https://shop-phinf.pstatic.net/20220325_175/16482050376748TXAH_JPEG/49340865489803194_455728417.JPG?type=f296_296"
+                     alt="first" style="width:60%;">
+            </a>
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <a href="https://smartstore.naver.com/thumblina_jewelry/products/6458630968" target="_blank">
+                <img src="https://shop-phinf.pstatic.net/20220325_38/1648201786500QzIsB_JPEG/49337682223641714_386154389.JPG?type=f296_296"
+                     alt="second" style="width:60%;">
+            </a>
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <a href="https://smartstore.naver.com/thumblina_jewelry/products/6449524167" target="_blank">
+                <img src="https://shop-phinf.pstatic.net/20220323_21/1648018299008LJCyk_JPEG/49154132811416454_555244714.JPG?type=f296_296"
+                     alt="third" style="width:60%;">
+            </a>
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <a href="https://smartstore.naver.com/thumblina_jewelry/products/6364125680" target="_blank">
+                <img src="https://shop-phinf.pstatic.net/20220302_25/1646212759619p60Tn_JPEG/47348605326422607_301957254.JPG?type=f296_296"
+                     alt="four" style="width:60%;">
+            </a>
+            <div class="carousel-caption">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container text-center">
+    <img src="https://shop-phinf.pstatic.net/20210412_32/1618190119813SbCJO_JPEG/19326015451700553_297469103.jpeg?type=f640"
+         style="width: 30%; float:left; margin-right:30px; margin-bottom: 30px;">
+    <h3 style="font-weight:bold; text-shadow: 3px 3px 3px gray;">NEW 신상품 입고!</h3>
+    <p>빛 없이도 반짝반짝한 스튼으로 이루어진 고급스러운 느낌이 물씬 드는 실핀!</p>
+    <p>단독으로만 착용하거나 두 가지를 한 번에 착용해도 과하지 않고 고급스럽게 예쁜 아이템입니다.</p>
+    <a id="btn" href="https://smartstore.naver.com/thumblina_jewelry/products/5626701674" target="_blank">자세히</a>
+</div>
+<footer class="py-5" style="background:pink;">
+    <p class="m-0 text-center">Copyright &copy; EunJung</p>
+</footer>
 </body>
 </html>
