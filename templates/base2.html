@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>예담마켓</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #name{
+           display:inline;
+           font-weight: bold;
+           font-size: 18px;
+           padding: 2px;
+           text-decoration-line: none;
+           color: white;
+           letter-spacing: 2px;
+        }
+        #header-link{
+            display: inline;
+            float: right;
+            margin-top : 3px;
+        }
+        @media(min-width: 768px){
+        .container {
+            width:750px;
+        }}
+        @media(min-width: 992px){
+        .container {
+            width:940px;
+        }}
+        nav{
+            float:left;
+            align-items: center;
+            width: 12.3rem;
+            height: 100%;
+            background-color: pink;
+            text-align: center;
+            justify-content:start;
+            border: 1px 1px 1px gray;
+        }
+        nav>p{
+            margin-top : 10px;
+        }
+        #wrap1{
+           float:left;
+           margin-top: 20px;
+        }
+         #wrap1{
+           float:left;
+           margin-top: 20px;
+        }
+        footer>p{
+            color: white;
+            margin-top: 5px;
+            width: 100%;
+        }
+
+        footer{
+              position:fixed;
+              left:0px;
+              bottom:0px;
+              width:100%;
+        }
+    </style>
+</head>
+<body>
+{%include 'navbar2.html'%}
+{%block content%}
+{%endblock%}
+{%include 'footer.html'%}
+</body>
+</html>

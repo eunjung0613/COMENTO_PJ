@@ -1,0 +1,43 @@
+<style>
+    #btn{
+        background: pink;
+        border:1px solid gray;
+        padding: 5px;
+        border-radius: 3px;
+        color: black;
+        text-decoration:none;
+    }
+    #btn2{
+        background: pink;
+        border:1px solid gray;
+        padding: 3px;
+        border-radius: 3px;
+    }
+    .wrap{
+        width:100%;
+        margin: auto;
+    }
+</style>
+{% extends "base.html" %}
+{% block content %}
+{% if form.errors %}
+<p>아이디 또는 비밀번호가 틀립니다. 다시 시도해주세요.</p>
+{% endif %}
+<div class="wrap">
+    <form method="post" action="{% url 'accounts:login' %}">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+            </tr>
+        </table>
+        <input id="btn2" type="submit" value="login">
+    </form>
+    <a id="btn" href="{% url 'accounts:signup' %}">signup</a>
+</div>
+{%endblock%}
